@@ -1,0 +1,96 @@
+/* Variables globales */
+:root {
+  --color-primary: #5A9BD3;
+  --color-primary-light: #A2D2F3;
+  --color-primary-dark: #2B6DAF;
+  --color-accent: #F5A623;
+  --color-bg: #F5F5F5;
+  --color-text: #333333;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+/* Reset et base */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: var(--font-body); color: var(--color-text); background: var(--color-bg); line-height:1.6; }
+.container { width:90%; max-width:1200px; margin:0 auto; }
+a { text-decoration:none; color: inherit; }
+
+/* Top Bar */
+.top-bar { background: var(--color-primary); color: #fff; font-size:0.875rem; }
+.top-bar .container { display:flex; justify-content:center; padding:0.5rem 0; }
+.top-bar a { color: #fff; text-decoration:underline; }
+
+/* Header */
+.site-header { background:#fff; border-bottom:1px solid #ddd; }
+.site-header .container { display:flex; align-items:center; justify-content:space-between; padding:1rem 0; }
+.logo img { height:40px; }
+.nav-toggle { display:none; background:none; border:none; font-size:1.5rem; }
+.main-nav ul { list-style:none; display:flex; gap:1rem; }
+.main-nav a:hover { color: var(--color-primary-dark); }
+
+/* Hero */
+.hero { padding:4rem 0; background:#fff; }
+.hero-grid { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:2rem; }
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.hero-content h1 { font-family:var(--font-heading); font-size:2.5rem; color:var(--color-primary-dark); margin-bottom:1rem; }
+.hero-content p { margin-bottom:1.5rem; }
+.btn { display:inline-block; padding:0.75rem 1.5rem; border-radius:8px; font-family:var(--font-heading); }
+.btn-primary { background:var(--color-primary); color:#fff; }
+.btn-primary:hover { background:var(--color-primary-dark); }
+
+/* Benefits */
+.benefits { padding:3rem 0; background:var(--color-primary-light); }
+.benefits h2 { text-align:center; font-family:var(--font-heading); margin-bottom:2rem; }
+.benefits-list { display:flex; gap:2rem; justify-content:center; }
+.benefit-item { background:#fff; padding:1.5rem; border-radius:8px; text-align:center; flex:1; }
+.benefit-icon { width: 3rem; height: 3rem; color: var(--color-primary); margin-bottom: 1rem; }
+.benefit-item h3 { margin-bottom:0.5rem; font-family:var(--font-heading); }
+
+/* Footer / Contact */
+.site-footer { background:#fff; padding:3rem 0; }
+.footer-grid { display:inline-flex; grid-template-columns:1fr 1fr; gap:2rem; }
+.contact-form-wrap h2 { font-family:var(--font-heading); margin-bottom:1rem; }
+.contact-form label { display:block; margin-top:1rem; }
+.contact-form input,
+.contact-form textarea { width:100%; padding:0.5rem; margin-top:0.25rem; border:1px solid #ccc; border-radius:4px; }
+.contact-info p { margin-bottom:0.5rem; }
+
+/* Products */
+.products { padding:3rem 0; background:var(--color-primary-light); }
+.products h2 { text-align:center; font-family:var(--font-heading); margin-bottom:2rem; }
+.product-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:2rem; }
+.product-item { background:#fff; padding:1.5rem; border-radius:8px; text-align:center; }
+.product-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.product-item h3 { margin-top:1rem; font-family:var(--font-heading); font-size:1.25rem; }
+.product-item p { margin-top:0.5rem; }
+.product-item a { display:inline-block; margin-top:1rem; }
+.product-item a.btn { background:var(--color-primary); color:#fff; padding:0.5rem 1rem; border-radius:4px; }
+.product-item a.btn:hover { background:var(--color-primary-dark); }
+
+/* Responsive */
+@media(max-width:1024px) {
+  .hero-grid { grid-template-columns:1fr; }
+}
+@media(max-width:768px) {
+  .hero-grid,
+  .footer-grid { grid-template-columns:1fr; }
+  .nav-toggle { display:block; }
+  .main-nav { display:none; }
+  .main-nav.open { display:block; background:#fff; position:absolute; top:60px; right:20px; padding:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+  .main-nav ul { flex-direction:column; gap:0.5rem; }
+}
+
+h2 {
+  text-align: center;
+}

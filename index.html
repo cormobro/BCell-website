@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CACHE CONTROL (TO REMOVE ON PROD)-->
+  <meta http-equiv="Cache-control" content="no-cache">
+  <title>BCell Group</title>
+  <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js" integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <p>Contact commercial : <a href="mailto:sales@bcell.com">sales@bcell.com</a> | <a href="#" hx-get="fragments/contact.html" hx-target="#main-content" hx-swap="innerHTML">Demandez un devis</a></p>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="logo" hx-get="fragments/home.html" hx-target="#main-content" hx-swap="innerHTML">
+        <img src="media/Logo2nb.png" alt="BCell Logo">
+      </a>
+      <button class="nav-toggle" aria-label="Ouvrir la navigation">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#" hx-get="fragments/home.html" hx-target="#main-content" hx-swap="innerHTML">Accueil</a></li>
+          <li><a href="#" hx-get="fragments/products.html" hx-target="#main-content" hx-swap="innerHTML">Produits</a></li>
+          <li><a href="#" hx-get="fragments/partners.html" hx-target="#main-content" hx-swap="innerHTML">Partenaires</a></li>
+          <li><a href="#" hx-get="fragments/contact.html" hx-target="#main-content" hx-swap="innerHTML">Contact</a></li>
+          <li><a href="#" hx-get="fragments/faq.html" hx-target="#main-content" hx-swap="innerHTML">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content loaded via HTMX -->
+  <main id="main-content"
+        hx-get="fragments/home.html"
+        hx-trigger="load"
+        hx-swap="innerHTML">
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
