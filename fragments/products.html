@@ -1,33 +1,39 @@
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <h1>NOS PRODUITS</h1>
+    </div>
+  </div>
+</section>
 <section class="products">
   <div class="container">
-    <h2>Notre Gamme de Produits</h2>
     <div class="product-grid">
       <!-- Exemple de produit -->
-      <div class="product-card">
+      <button class="product-card" hx-get="fragments/products/product-detail-24206.html" hx-target="#product-specs" hx-swap="innerHTML">
         <h3>B-Box+ 25,6V 206Ah</h3>
         <p>Capacité : 5,274kWh</p>
-        <button class="btn btn-primary" hx-get="fragments/product-detail.html?id=12V100" hx-target="#main-content" hx-swap="innerHTML">Voir détail</button>
-      </div>
-      <div class="product-card">
+        <!--<button class="btn btn-primary" hx-get="fragments/products/product-detail-24206.html" hx-target="#product-specs" hx-swap="innerHTML">Voir détail</button>-->
+      </button>
+      <button class="product-card" hx-get="fragments/products/product-detail-48105.html" hx-target="#product-specs" hx-swap="innerHTML">
         <h3>B-Box+ 51,2V 105Ah</h3>
         <p>Capacité : 5,376kWh</p>
-        <button class="btn btn-primary" hx-get="fragments/product-detail.html?id=12V100" hx-target="#main-content" hx-swap="innerHTML">Voir détail</button>
-      </div>
-      <div class="product-card">
+      </button>
+      <button class="product-card" hx-get="fragments/products/product-detail-48206.html" hx-target="#product-specs" hx-swap="innerHTML">
         <h3>B-Box+ 51,2V 206Ah</h3>
         <p>Capacité : 10,547kWh</p>
-        <button class="btn btn-primary" hx-get="fragments/product-detail.html?id=12V100" hx-target="#main-content" hx-swap="innerHTML">Voir détail</button>
-      </div>
-      <div class="product-card">
+      </button>
+      <button class="product-card" hx-get="fragments/products/product-detail-48314.html" hx-target="#product-specs" hx-swap="innerHTML">
         <h3>B-Box+ 51,2V 314Ah</h3>
         <p>Capacité : 16,077kWh</p>
-        <button class="btn btn-primary" hx-get="fragments/product-detail.html?id=12V100" hx-target="#main-content" hx-swap="innerHTML">Voir détail</button>
-      </div>
-      <div class="product-card">
+      </button>
+      <button class="product-card" hx-get="fragments/products/product-detail-482314.html" hx-target="#product-specs" hx-swap="innerHTML">
         <h3>B-Box+ 51,2V 314Ah*2</h3>
         <p>Capacité : 32,154kWh</p>
-        <button class="btn btn-primary" hx-get="fragments/product-detail.html?id=12V100" hx-target="#main-content" hx-swap="innerHTML">Voir détail</button>
-      </div>
+      </button>
     </div>
+  </div>
+  </section>
+<section>
+  <div class="product-container" id="product-specs" hx-get="fragments/products/product-detail-24206.html" hx-trigger="load" hx-swap="innerHTML">
   </div>
 </section>
