@@ -27,6 +27,7 @@
       <nav class="main-nav">
         <ul>
           <li><a href="#" hx-get="fragments/home.html" hx-target="#main-content" hx-swap="innerHTML">Accueil</a></li>
+          <li><a href="#" hx-get="fragments/about.html" hx-target="#main-content" hx-swap="innerHTML">À propos</a></li>
           <li><a href="#" hx-get="fragments/products.html" hx-target="#main-content" hx-swap="innerHTML">Produits</a></li>
           <li><a href="#" hx-get="fragments/partners.html" hx-target="#main-content" hx-swap="innerHTML">Partenaires</a></li>
           <li><a href="#" hx-get="fragments/contact.html" hx-target="#main-content" hx-swap="innerHTML">Contact</a></li>
@@ -40,7 +41,8 @@
   <main id="main-content"
         hx-get="fragments/home.html"
         hx-trigger="load"
-        hx-swap="innerHTML">
+        hx-swap="innerHTML"
+        class="reset-scroll">
   </main>
 
     <!-- Footer for legal informations -->

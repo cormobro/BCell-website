@@ -32,3 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     siteheader.classList.add('scrolled');
   }
 });
+//Reset scroll on HX-GET
+document.body.addEventListener('htmx:afterSwap', function(evt) {
+  var triggerElement = evt.detail.elt;
+  if (triggerElement.classList.contains('reset-scroll')) {
+    window.scrollTo(0, 0);
+  }
+});
