@@ -31,7 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.scrollY > 10) {
     siteheader.classList.add('scrolled');
   }
+
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.product-card')) {
+      const clickedCard = e.target.closest('.product-card');
+      document.querySelectorAll('.product-card').forEach(c => c.classList.remove('active'));
+      clickedCard.classList.add('active');
+    }
+  });
 });
+
 //Reset scroll on HX-GET
 document.body.addEventListener('htmx:afterSwap', function(evt) {
   var triggerElement = evt.detail.elt;
