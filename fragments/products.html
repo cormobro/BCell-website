@@ -7,11 +7,9 @@
   </div>
 </section>
 
-
 <section class="products">
-  <div class="container">
+  <div class="container-large">
     <div class="product-tabs">
-      <!-- Liste des produits sous forme de cartes cliquables -->
       <div class="product-card" role="button" tabindex="0" hx-get="fragments/products/product-detail-24206.html" hx-target="#product-specs" hx-swap="innerHTML">
         <p>25,6V 206Ah <br><small>Capacité : 5,274kWh</small></p>
       </div>
@@ -28,12 +26,17 @@
         <p>51,2V 314Ah*2 <br><small>Capacité : 32,154kWh</small></p>
       </div>
     </div>
+    <div class="product-container" id="product-specs" hx-get="fragments/products/product-detail-24206.html" hx-trigger="click" hx-swap="innerHTML"></div>
+  </div>
+  <div class="container">
+    <div class="products-comparison">
+      <h2>MON TABLEAU COMPARATIF</h2>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="product-container" id="product-specs" hx-get="fragments/products/product-detail-24206.html" hx-trigger="load" hx-swap="innerHTML"></div>
-</section>
+
+
 
 
 
