@@ -108,7 +108,7 @@ s { font-size: 0.9rem; }
 
 /* Benefits */
 .benefits { padding: 3rem 0; background: #fff; }
-.benefits::after { content: ''; display: block; width: 50%; height: 6px; background-color: var(--color-primary); margin: 0 auto; border-radius: 2px; margin-top: 5%; }
+.processus::after { content: ''; display: block; width: 50%; height: 6px; background-color: var(--color-primary); margin: 0 auto; border-radius: 2px; margin-top: 5%; }
 .benefits h4 { text-align: center; font-family: var(--font-heading); font-weight: 700; line-height: 2; margin-bottom: 2rem; font-style: italic; color: var(--color-text); margin-left: 11%; margin-right: 11%; max-width: 80%; }
 .benefits h4::after { content: ''; display: block; width: 70%; height: 6px; background-color: var(--color-primary); margin: 0 auto; border-radius: 2px; margin-top: 10%; margin-bottom: 10%; }
 
@@ -121,21 +121,47 @@ s { font-size: 0.9rem; }
 .benefit-item:nth-child(2) p { font-size: 1.25rem; }
 @media (max-width: 768px) { .benefits-list { flex-direction: column; margin: 0 1rem; } .benefit-item { flex: none; margin-bottom: 2rem; transform: none !important; } .benefits-list .benefit-item:nth-child(2) { flex: none; padding: 2rem; } }
 
-/* Processu - comment ça marche */
+/* Processus - comment ça marche */
 
 .processus { padding: 4rem 0; background: #f9f9f9; }
 .processus-title { background-color: var(--color-primary-dark); color: white; padding: 2px 6px; border-radius: 4px; }
-.processus h2 { text-align: center; font-family: var(--font-heading); font-weight: 700; margin-bottom: 13rem; font-size: 2.5rem; }
-.processus-timeline { display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: nowrap; user-select: none; }
+.processus h2 { text-align: center; font-family: var(--font-heading); font-weight: 700; margin-bottom: 7rem; font-size: 2.5rem; }
+/*.processus-timeline { display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: nowrap; user-select: none; }
 .processus-step { display: flex; flex-direction: column; align-items: center; width: 150px; position: relative; }
 .processus-step.top .processus-bubble,
 .processus-step.bottom .processus-bubble { position: absolute; background: white; border: 2px solid var(--color-primary-dark); color: var(--color-primary-dark); padding: 0.7rem 1rem; border-radius: 12px; font-size: 1rem; width: max-content; max-width: 140px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1); z-index: 3; }
 .processus-step.top .processus-bubble { bottom: 100%; margin-bottom: 1rem; }
-.processus-step.bottom .processus-bubble { top: 100%; margin-top: 1rem; }
-.processus-icon { font-size: 3rem; background: white; border-radius: 50%; width: 70px; height: 70px; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 10px rgba(0,0,0,0.1); z-index: 2; }
-.processus-arrow { font-size: 3.5rem; color: var(--color-primary-dark); user-select: none; margin: 0 1rem; line-height: 1; font-weight: bold; }
+.processus-step.bottom .processus-bubble { top: 100%; margin-top: 1rem; }*/
+/* .processus-icon { font-size: 3rem; background: white; border-radius: 50%; width: 70px; height: 70px; display: flex; justify-content: center; align-items: center; box-shadow: 0 0 10px rgba(0,0,0,0.1); z-index: 2; }
+.processus-arrow { font-size: 24px; color: var(--color-primary-dark); user-select: none; margin: 0 1rem; line-height: 1; font-weight: bold; }
 .processus-step.top:nth-child(1) { margin-top: -40px; }
-@media (max-width: 768px) { .processus-timeline { flex-direction: column; gap: 3rem; } .processus-arrow { display: none; } .processus-step { width: auto; } .processus-step.top .processus-bubble, .processus-step.bottom .processus-bubble { position: relative; top: auto; bottom: auto; margin: 0 0 1rem 0; max-width: 100%; } }
+@media (max-width: 768px) { .processus-timeline { flex-direction: column; gap: 3rem; } .processus-arrow { display: none; } .processus-step { width: auto; } .processus-step.top .processus-bubble, .processus-step.bottom .processus-bubble { position: relative; top: auto; bottom: auto; margin: 0 0 1rem 0; max-width: 100%; } } */
+
+
+/* Timeline */.processus-timeline { display: flex; justify-content: space-between; align-items: flex-start; position: relative; padding: 0 2rem; }
+
+/* Ligne de connexion */.processus-timeline::before { content: ''; position: absolute; top: 90px; left: 50px; right: 50px; height: 2px; background: var(--color-primary-dark); z-index: 1; }
+
+/* Étape */.processus-step { display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2; width: 22%; min-width: 200px; }
+
+.arrow-right { width: 3rem; height: 3rem; margin-top: 0.7rem;}
+
+/* Conteneur icône */.processus-icon { width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 2px solid var(--color-primary-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 1.5rem; }
+.processus-bubble strong  { font-size: 1.1rem; color: var(--color-primary-dark); margin-bottom: 0.5rem;}
+
+/* Image SVG */.processus-icon img { width: 40px; height: 40px; object-fit: contain; }
+
+/* Boîte info */.processus-bubble { background: white; border: 2px solid var(--color-primary-dark); color: #333; padding: 1.8rem; border-radius: 12px; width: 100%; box-shadow: 0 4px 16px rgba(0,0,0,0.1); text-align: center; justify-content: center; min-height: 200px; display: flex; flex-direction: column; transition: transform 0.3s ease; }
+
+/* Titre boîte */.processus-bubble h3 { color: var(--color-primary-dark); font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600; line-height: 1.3; }
+
+/* Texte boîte */.processus-bubble p { font-size: 1rem; line-height: 1.5; margin: 0; color: #555; }
+
+/* Hover */.processus-bubble:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+/* Version mobile */@media (max-width: 992px) { .processus-timeline { flex-wrap: wrap; justify-content: center; gap: 3rem; padding: 0; }.processus-timeline::before { display: none; }.processus-step { width: 45%; min-width: 250px; }.processus h2 { margin-bottom: 3rem; } }
+
+/* Version très mobile */@media (max-width: 576px) { .processus-step { width: 100%; max-width: 320px; }.processus-bubble { min-height: auto; padding: 1.5rem; } }
 
 
 /* ----------------------------------- */
@@ -206,6 +232,41 @@ s { font-size: 0.9rem; }
 .product-card.active {font-weight: 800; background-color: var(--color-primary-light); border-bottom: 0; position: relative; }
 /* .product-card.active::after { content:""; display:block; height:4px; background-color: var(--color-primary); margin-top:4px; } */
 
+.product-spec-container {width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 2rem; }
+.product-image { flex:1; border-radius:8px; display:flex; justify-content: center; align-items: center; }
+.product-image img { width: 100%; height: auto; object-fit: contain; border-radius: 8px; }
+.product-info { flex:1; display:flex; flex-direction:column; gap:20px; align-items: flex-start; margin-left: 5rem;}
+.specs-table-compact th { text-align: left;}
+.specs-table-compact td { text-align: right;}
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.specs-table th,
+.specs-table td {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background-color: white;
+}
+
+.specs-table th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  width: 40%;
+  text-align: left;
+}
+
+.specs-table th[colspan="2"] {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.specs-table tr:hover {
+  background-color: #f1f5f9;
+}
 .products-comparison { display: flex; align-items: center; justify-content: center; padding: 2rem; }
 
 @media (max-width: 1000px) { .product-card h3 { font-size: 0.9rem; } .product-card p { font-size: 0.8rem; } }
