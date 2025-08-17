@@ -228,6 +228,21 @@ section { padding: 40px 20px; }
 .compare th { background: #f0f0f0; }
 @media (max-width: 768px) { #showing, #products, .trusted { flex-direction: column; } .buttons { display: flex; flex-direction: column; } .buttons .btn { margin-bottom: 10px; } .trusted-right { margin-top: 20px; } }
 
+/* Products Details */
+
+.product-spec-container { margin: 20px 0; padding: 20px; border: 1px solid #d1d5db; background: #fff; }
+.product-info h2 { font-size: 1.4rem; font-weight: 600; color: #111827; margin-bottom: 15px; }
+.specs-table-compact, .specs-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.95rem; }
+.specs-table-compact th, .specs-table th { text-align: left; padding: 8px; background: #f3f4f6; color: #111827; font-weight: 600; border: 1px solid #d1d5db; }
+.specs-table-compact td, .specs-table td { padding: 8px; border: 1px solid #d1d5db; color: #374151; }
+.specs-table th[colspan="2"] { text-align: center; background: #e5e7eb; color: #111827; font-size: 1rem; }
+.download-btn { display: inline-block; margin-top: 10px; padding: 8px 14px; background: #1e3a8a; color: #fff; font-size: 0.9rem; font-weight: 500; text-decoration: none; border: 1px solid #1e3a8a; }
+.download-btn:hover { background: #fff; color: #1e3a8a; text-decoration: underline; }
+.product-info a { display: inline-block; margin-top: 10px; color: #1e3a8a; font-weight: 500; text-decoration: none; }
+.product-info a:hover { text-decoration: underline; }
+
+.product-details .default { display: block; text-align: center; margin: 40px auto; color: #555; font-size: 1rem; }
+
 
 
 /* .products .container { max-width: 100%; overflow-x: auto; padding: 5%;}
@@ -401,6 +416,7 @@ textarea {min-height: 150px;resize: vertical;}
   .main-nav { display:none; }
   .main-nav.open { display:block; background:#fff; position:absolute; top:60px; right:20px; padding:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
   .main-nav ul { flex-direction:column; gap:0.5rem; }
+  .site-header:not(.scrolled) .main-nav a { color: black !important; }
 }
 
 /* Styles pour les écrans de taille moyenne et grande */
