@@ -7,23 +7,176 @@
   </div>
 </section>
 
-<section class="products">
+
+  <!-- Hero Section -->
+  <section id="showing">
+    <div class="showing-text">
+      <ul class="keywords">
+        <li>Fiable</li>
+        <li>Puissante</li>
+        <li>Durable</li>
+        <li>Innovante</li>
+      </ul>
+      <h2>Découvrez notre nouvelle gamme de batteries</h2>
+      <p>Nos batteries lithium allient performance, fiabilité et longue durée de vie. 
+Compactes et sécurisées, elles s’adaptent à de nombreuses applications, 
+du domestique à l’industriel, tout en offrant un rendement optimal.</p>
+      <div class="buttons">
+        <a href="#products" class="btn">Nos produits</a>
+        <a href="/contact" class="btn">Contactez-nous</a>
+      </div>
+    </div>
+    <div class="showing-image">
+      <img src="media/showing.webp" alt="Batterie">
+    </div>
+  </section>
+
+  <!-- Section "Ils nous font confiance" -->
+  <section class="trusted">
+    <div class="trusted-left">
+      <h3>Ils nous font confiance</h3>
+    </div>
+    <div class="trusted-right">
+      <img src="client1.png" alt="Client 1">
+      <img src="client2.png" alt="Client 2">
+      <img src="client3.png" alt="Client 3">
+      <img src="client4.png" alt="Client 4">
+    </div>
+  </section>
+
+  <!-- Section Produits -->
+  <section id="products">
+    <div class="product-list">
+
+      <p>Produits</p>
+      <hr>
+      <p class="products-product-list-link" role="button" hx-get="fragments/products/product-detail-24206.html" hx-target="#product-specs" hx-swap="innerHTML">La Nomade 24</p>
+      <p class="products-product-list-link" role="button" hx-get="fragments/products/product-detail-48105.html" hx-target="#product-specs" hx-swap="innerHTML">La Nomade 48</p>
+      <p class="products-product-list-link" role="button" hx-get="fragments/products/product-detail-48206.html" hx-target="#product-specs" hx-swap="innerHTML">La Polyvalente</p>
+      <p class="products-product-list-link" role="button" hx-get="fragments/products/product-detail-48314.html" hx-target="#product-specs" hx-swap="innerHTML">L'Endurante</p>
+      <p class="products-product-list-link" role="button" hx-get="fragments/products/product-detail-482314.html" hx-target="#product-specs" hx-swap="innerHTML">La Réserve</p>
+      <hr>
+    </div>
+    <div class="product-details" id="product-specs" hx-get="/fragments/products/choose_product.html" hx-trigger="load" hx-swap="innerHTML"></div>
+    <!--<div class="product-details">
+      <p class="default">Veuillez sélectionner un produit pour voir les détails techniques.</p>
+      <div class="detail" id="eco">
+        <h4>Batterie Éco</h4>
+        <ul>
+          <li>Capacité: 100 Ah</li>
+          <li>Tension: 12 V</li>
+          <li>Poids: 20 kg</li>
+          <li>Garantie: 2 ans</li>
+        </ul>
+        <div class="product-buttons">
+          <a href="fiche-batterie-eco.pdf" class="btn">Télécharger la fiche PDF</a>
+          <a href="/contact" class="btn">Demander un devis</a>
+        </div>
+      </div>
+    </div> -->
+  </section>
+
+  <hr class="separator">
+
+  <!-- Section Tableau comparatif -->
+  <section class="compare">
+    <h3>Comparatif des batteries</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Caractéristiques</th>
+          <th>Éco</th>
+          <th>Confort</th>
+          <th>Sport</th>
+          <th>Pro</th>
+          <th>Xtreme</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Capacité</td>
+          <td>100 Ah</td>
+          <td>120 Ah</td>
+          <td>150 Ah</td>
+          <td>200 Ah</td>
+          <td>250 Ah</td>
+        </tr>
+        <tr>
+          <td>Tension</td>
+          <td>12 V</td>
+          <td>12 V</td>
+          <td>12 V</td>
+          <td>24 V</td>
+          <td>24 V</td>
+        </tr>
+        <tr>
+          <td>Poids</td>
+          <td>20 kg</td>
+          <td>25 kg</td>
+          <td>30 kg</td>
+          <td>35 kg</td>
+          <td>40 kg</td>
+        </tr>
+        <tr>
+          <td>Garantie</td>
+          <td>2 ans</td>
+          <td>3 ans</td>
+          <td>3 ans</td>
+          <td>5 ans</td>
+          <td>5 ans</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr>
+
+</body>
+</html>
+
+
+<!-- <section class="products">
   <div class="container-large">
     <div class="product-tabs">
       <div class="product-card" role="button" tabindex="0" hx-get="fragments/products/product-detail-24206.html" hx-target="#product-specs" hx-swap="innerHTML">
-        <p>25,6V 206Ah <br><small>Capacité : 5,274kWh</small></p>
+        <div>
+          <p>La Nomade 24 <br><small>Capacité : 5,274kWh</small></p>
+        </div>
+        <div class="product-card-image">
+          <img src="media/bcellbattery.png" alt="Batterie Lithium 25,6V 206Ah" loading="lazy">
+        </div>
       </div>
       <div class="product-card" role="button" tabindex="0" hx-get="fragments/products/product-detail-48105.html" hx-target="#product-specs" hx-swap="innerHTML">
-        <p>51,2V 105Ah <br><small>Capacité : 5,376kWh</small></p>
+        <div>
+          <p>La Nomade 48 <br><small>Capacité : 5,376kWh</small></p>
+        </div>
+        <div class="product-card-image">
+          <img src="media/bcellbattery.png" alt="Batterie Lithium 25,6V 206Ah" loading="lazy">
+        </div>
       </div>
       <div class="product-card" role="button" tabindex="0" hx-get="fragments/products/product-detail-48206.html" hx-target="#product-specs" hx-swap="innerHTML">
-        <p>51,2V 206Ah <br><small>Capacité : 10,547kWh</small></p>
+        <div>
+          <p>La Polyvalente <br><small>Capacité : 10,547kWh</small></p>
+        </div>
+        <div class="product-card-image">
+          <img src="media/bcellbattery.png" alt="Batterie Lithium 25,6V 206Ah" loading="lazy">
+        </div>
       </div>
       <div class="product-card" role="button" tabindex="0" hx-get="fragments/products/product-detail-48314.html" hx-target="#product-specs" hx-swap="innerHTML">
-        <p>51,2V 314Ah <br><small>Capacité : 16,077kWh</small></p>
+        <div>
+          <p>L'Endurante<br><small>Capacité : 16,077kWh</small></p>
+        </div>
+        <div class="product-card-image">
+          <img src="media/bcellbattery.png" alt="Batterie Lithium 25,6V 206Ah" loading="lazy">
+        </div>
       </div>
       <div class="product-card" role="button" tabindex="0" hx-get="fragments/products/product-detail-482314.html" hx-target="#product-specs" hx-swap="innerHTML">
-        <p>51,2V 314Ah*2 <br><small>Capacité : 32,154kWh</small></p>
+        <div>
+          <p>La Réserve<br><small>Capacité : 32,154kWh</small></p>
+        </div>
+        <div class="product-card-image">
+          <img src="media/bcellbattery.png" alt="Batterie Lithium 25,6V 206Ah" loading="lazy">
+        </div>
       </div>
     </div>
     <div class="product-container" id="product-specs" hx-swap="innerHTML"></div>
@@ -33,7 +186,7 @@
       <h2>MON TABLEAU COMPARATIF</h2>
     </div>
   </div>
-</section>
+</section> -->
 
 
 

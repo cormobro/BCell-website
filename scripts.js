@@ -27,25 +27,70 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-    document.addEventListener('click', (e) => {
-    if (e.target.closest('.product-card')) {
-      const clickedCard = e.target.closest('.product-card');
+    /*document.addEventListener('click', (e) => {
+    if (e.target.closest('.products-product-list-link')) {
+      const clickedCard = e.target.closest('.products-product-list-link');
       const productSpecs = document.getElementById('product-specs');
       // If clicking on already active card
       if (clickedCard.classList.contains('active')) {
         clickedCard.classList.remove('active');
-        productSpecs.style.display = 'none'; // Hide the specs
+        //productSpecs.style.display = 'none'; // Hide the specs
+        clickedCard.setAttribute('hx-get', "fragments/products/choose_product.html");
+        console.log("clickedCard: ", clickedCard.getAttribute('hx-get'))
+        if (window.htmx && productSpecs) {
+        // triggers hx-trigger="load" on that element
+        htmx.trigger(productSpecs, 'load');
+        htmx.trigger(clickedCard, 'refresh');
+      } else {
+        console.warn('htmx not loaded or element missing');
+      }
+        console.log("test:", productSpecs.getAttribute('hx-get'));
       } else {
         // If clicking on a different card
-        document.querySelectorAll('.product-card').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.products-product-list-link').forEach(c => c.classList.remove('active'));
         clickedCard.classList.add('active');
-        productSpecs.style.display = 'flex'; // Show the specs
-        productSpecs.style.backgroundColor = '#dff4ff';
+        productSpecs.style.display = 'flex';
       }
     }
-  });
-});
+  });*/
 
+  // capture clicks BEFORE htmx handlers run
+document.addEventListener('click', function (e) {
+  const clickedCard = e.target.closest('.products-product-list-link');
+  if (!clickedCard) return;
+
+  // Si la carte est déjà active -> on remplace la requête prévue par htmx
+  if (clickedCard.classList.contains('active')) {
+    // empêche htmx d'envoyer sa propre requête
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    const productSpecs = document.getElementById('product-specs');
+    if (!productSpecs) return;
+
+    clickedCard.classList.remove('active');
+    //productSpecs.style.display = 'flex';
+
+    // URL de la page "choisir produit" — utilise un chemin absolu pour éviter les problèmes relatifs
+    const chooseUrl = '/fragments/products/choose_product.html';
+
+    if (window.htmx) {
+      // appelle htmx manuellement -> respecte les events htmx
+      htmx.ajax('GET', chooseUrl, { target: '#product-specs', swap: 'innerHTML' });
+    } else {
+      // fallback si htmx non chargé
+      fetch(chooseUrl)
+        .then(r => r.text())
+        .then(html => { productSpecs.innerHTML = html; })
+        .catch(err => console.error('Fetch failed', err));
+    }
+
+    return;
+  }
+  document.querySelectorAll('.products-product-list-link').forEach(c => c.classList.remove('active'))
+  clickedCard.classList.add('active');
+}, true);
+});
 
   // Initialisation au chargement
   if (window.scrollY > 10) {
@@ -71,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Gestion clic sur product-card
-  document.addEventListener('click', e => {
+  /*document.addEventListener('click', e => {
     const card = e.target.closest('.product-card');
     if(!card) return;
 
@@ -90,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Charge produit et ouvre shadowbox
     loadProduct(card.dataset.url);
-  });
+  });*/
 
   // Après swap HTMX : ouvrir la shadowbox avec animation
   shadowbox.addEventListener('htmx:afterSwap', () => {
