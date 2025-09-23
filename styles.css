@@ -108,6 +108,13 @@ s { font-size: 0.9rem; }
 .heroContact-content h1 { font-family: var(--font-heading); color: #fff; margin-bottom: 1rem; position: relative; display: inline-block; }
 .heroContact-content h1::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: -0.5rem; width: 70%; height: 5px; background-color:var(--color-primary); border-radius: 2px; }
 .heroContact-content h4 { margin: 1rem; font-weight: 600; }
+
+/* Herofaq */
+
+.herofaq { background: url('media/herofaq.webp') center/cover no-repeat fixed; color: #fff; display: flex; text-align: center; align-items: center; padding: 4rem 0; min-height: 100vh; }
+.herofaq-content h1 { font-family: var(--font-heading); color: #fff; margin-bottom: 1rem; position: relative; display: inline-block; }
+.herofaq-content h1::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: -0.5rem; width: 70%; height: 5px; background-color:var(--color-primary); border-radius: 2px; }
+.herofaq-content h4 { margin: 1rem; font-weight: 600; }
 /* ----------------------------------------------*/
 
 /* ---- HOME PAGE ---- */
