@@ -32,17 +32,25 @@ du domestique à l’industriel, tout en offrant un rendement optimal.</p>
   </section>
 
   <!-- Section "Ils nous font confiance" -->
-  <section class="trusted">
-    <div class="trusted-left">
-      <h3>Ils nous font confiance</h3>
-    </div>
-    <div class="trusted-right">
-      <img src="client1.png" alt="Client 1">
-      <img src="client2.png" alt="Client 2">
-      <img src="client3.png" alt="Client 3">
-      <img src="client4.png" alt="Client 4">
-    </div>
-  </section>
+<section class="trusted">
+  <div class="trusted-left">
+    <h3>Ils nous font confiance</h3>
+  </div>
+  <div class="trusted-right">
+    <a href="https://www.facebook.com/wattec.mada/?locale=fr_FR" target="_blank">
+      <img src="media/wattec.png" alt="Wattec">
+    </a>
+    <a href="https://ecobatts.tech" target="_blank">
+      <img src="media/ecobatts.png" alt="Ecobatts">
+    </a>
+    <a href="https://www.sqvision.mg/en_GB" target="_blank">
+      <img src="media/sqvision.png" alt="SQ Vision">
+    </a>
+    <a href="https://oceantrade.mg/" target="_blank">
+      <img src="media/oceantrade.png" alt="Ocean Trade">
+    </a>
+  </div>
+</section>
 
   <!-- Section Produits -->
   <section id="products">
@@ -56,24 +64,10 @@ du domestique à l’industriel, tout en offrant un rendement optimal.</p>
       <p class="products-product-list-link" role="button" hx-get="fragments/products/product-detail-48314.html" hx-target="#product-specs" hx-swap="innerHTML">L'Endurante</p>
       <p class="products-product-list-link" role="button" hx-get="fragments/products/product-detail-482314.html" hx-target="#product-specs" hx-swap="innerHTML">La Réserve</p>
       <hr>
-    </div>
+     <p class="products-product-list-link" role="button" hx-get="fragments/products/testcalibrage.html" hx-target="#product-specs" hx-swap="innerHTML">Test & Calibrage</p>
+     <hr>
+     </div>
     <div class="product-details" id="product-specs" hx-get="/fragments/products/choose_product.html" hx-trigger="load" hx-swap="innerHTML"></div>
-    <!--<div class="product-details">
-      <p class="default">Veuillez sélectionner un produit pour voir les détails techniques.</p>
-      <div class="detail" id="eco">
-        <h4>Batterie Éco</h4>
-        <ul>
-          <li>Capacité: 100 Ah</li>
-          <li>Tension: 12 V</li>
-          <li>Poids: 20 kg</li>
-          <li>Garantie: 2 ans</li>
-        </ul>
-        <div class="product-buttons">
-          <a href="fiche-batterie-eco.pdf" class="btn">Télécharger la fiche PDF</a>
-          <a href="/contact" class="btn">Demander un devis</a>
-        </div>
-      </div>
-    </div> -->
   </section>
 
   <hr class="separator">

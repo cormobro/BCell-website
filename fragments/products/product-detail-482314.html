@@ -4,18 +4,28 @@
 
   <div class="product-info">
     <h2>La Réserve</h2>
+        <!-- Slider -->
+    <div class="product-slider">
+      <button class="slider-btn prev">❮</button>
+      <div class="slider-track">
+        <img src="media/gblanche1.png" alt="Photo 1">
+        <img src="media/gblanche2.png" alt="Photo 2">
+        <img src="media/gblanche3.png" alt="Photo 3">
+        <img src="media/gblanche4.png" alt="Photo 4">
+        <img src="media/gblanche5.png" alt="Photo 5">
+      </div>
+      <button class="slider-btn next">❯</button>
+    </div>
     <table class="specs-table-compact">
       <tbody>
         <tr><th>Tension nominale</th><td>51,2V</td></tr>
-        <tr><th>Capacité</th><td>2 * 314Ah</td></tr>
+        <tr><th>Capacité</th><td>2 × 314Ah</td></tr>
         <tr><th>Énergie</th><td>32,154kWh</td></tr>
         <tr><th>Dimensions</th><td>480x170x240mm</td></tr>
         <tr><th>Poids</th><td>170kg</td></tr>
       </tbody>
     </table>
-    <a href="fiche-technique.pdf" class="download-btn" target="_blank">📄 Télécharger la fiche technique</a>
-    <a href="#" hx-get="fragments/contact.html" hx-target="#main-content" hx-swap="innerHTML">Demander un devis</a>
-    <a href="certif-CE.pdf" class="download-btn" target="_blank">📄 Voir le certificat CE</a>
+    <a href="fiche-technique.pdf" class="download-btn" target="_blank"> 📄 Télécharger la fiche technique</a>
   </div>
 </div>
 <div class="product-spec-container">
@@ -24,17 +34,17 @@
     <tr>
       <th colspan="2">Caractéristiques Électriques</th>
     </tr>
-    <tr><th>Tension nominale</th><td>25,6V</td></tr>
-    <tr><th>Capacité</th><td>206Ah</td></tr>
-    <tr><th>Énergie</th><td>5,274kWh</td></tr>
-    <tr><th>Tension de charge max</th><td>29,2V</td></tr>
-    <tr><th>Tension de coupure</th><td>20V</td></tr>
+    <tr><th>Tension nominale</th><td>51,2V</td></tr>
+    <tr><th>Capacité</th><td>2 × 314Ah</td></tr>
+    <tr><th>Énergie</th><td>32,154kWh</td></tr>
+    <tr><th>Tension de charge max</th><td>58,4V</td></tr>
+    <tr><th>Tension de coupure</th><td>40V</td></tr>
 
     <tr>
       <th colspan="2">Caractéristiques Physiques</th>
     </tr>
     <tr><th>Dimensions</th><td>480 × 170 × 240mm</td></tr>
-    <tr><th>Poids</th><td>25kg</td></tr>
+    <tr><th>Poids</th><td>170kg</td></tr>
 
     <tr>
       <th colspan="2">Performance</th>
@@ -51,3 +61,27 @@
   </tbody>
 </table>
 </div>
+
+<script>
+document.querySelectorAll(".product-slider").forEach(slider=>{
+  const track = slider.querySelector(".slider-track");
+  const images = track.querySelectorAll("img");
+  const prev = slider.querySelector(".slider-btn.prev");
+  const next = slider.querySelector(".slider-btn.next");
+  let index = 0;
+
+  function updateSlide(){
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prev.addEventListener("click",()=>{
+    index = (index - 1 + images.length) % images.length;
+    updateSlide();
+  });
+
+  next.addEventListener("click",()=>{
+    index = (index + 1) % images.length;
+    updateSlide();
+  });
+});
+</script>

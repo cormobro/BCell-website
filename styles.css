@@ -95,12 +95,12 @@ s { font-size: 0.9rem; }
 .btnproducts-primary { background: var(--color-primary); color: #fff; }
 .btnproducts-primary:hover { background: var(--color-primary-dark); }
 
-/* Heropartners */
+/* Herotech */
 
-.heropartners { background: url('media/heroppartners.webp') center/cover no-repeat fixed; background-position: center 75%; color: #fff; display: flex; text-align: center; align-items: center; padding: 4rem 0; min-height: 100vh; }
-.heropartners-content h1 { font-family: var(--font-heading); color: #fff; margin-bottom: 1rem; position: relative; display: inline-block; }
-.heropartners-content h1::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: -0.5rem; width: 70%; height: 5px; background-color:var(--color-primary); border-radius: 2px; }
-.heropartners-content h4 { margin: 1rem; font-weight: 600; }
+.herotech { background: url('media/herotech.png') center/cover no-repeat fixed; background-position: center 75%; color: #fff; display: flex; text-align: center; align-items: center; padding: 4rem 0; min-height: 100vh; }
+.herotech-content h1 { font-family: var(--font-heading); color: #fff; margin-bottom: 1rem; position: relative; display: inline-block; }
+.herotech-content h1::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: -0.5rem; width: 70%; height: 5px; background-color:var(--color-primary); border-radius: 2px; }
+.herotech-content h4 { margin: 1rem; font-weight: 600; }
 
 /* HeroContact */
 
@@ -227,6 +227,13 @@ section { padding: 40px 20px; }
 .compare th, .compare td { border: 1px solid #ccc; padding: 8px; text-align: center; }
 .compare th { background: #f0f0f0; }
 @media (max-width: 768px) { #showing, #products, .trusted { flex-direction: column; } .buttons { display: flex; flex-direction: column; } .buttons .btn { margin-bottom: 10px; } .trusted-right { margin-top: 20px; } }
+.service-list { flex: 1 1 200px; max-width: 200px; margin-left: 5%; }
+.service-list p:not(:first-child) { display: block; width: 100%; margin-bottom: 5px; padding: 4px; border: none; cursor: pointer; }
+.service-list p:hover:not(:first-child) { text-decoration: underline; }
+.service-list p.active { text-decoration: underline; }
+.service-list hr { margin-top: 20px; }
+.services-service-list-link { margin: 1px; }
+
 
 /* Products Details */
 
@@ -349,14 +356,78 @@ section { padding: 40px 20px; }
 
 /*-----------------------------------*/
 
-/* ---- PARTNERS PAGE ---- */
+/* ---- TECHNOLOGY PAGE ---- */
 
-/* Partners */
-.partners { padding:3rem 0; }
-.partner-card { display: flex; justify-content: center; align-items: center; padding: 2rem; flex: 1 1 200px; background-color: #fff; background-image: -webkit-linear-gradient(-15deg, var(--color-primary-light) 33%, #fff 33%); height: 20vh; margin-bottom: rem; }
-.partner-card:nth-child(2) { background-image: -webkit-linear-gradient(15deg, #fff 67%, var(--color-primary) 67%); }
-.partner-card h3 { flex: 1; text-align: center; }
-.partner-card div { flex: 2; }
+/* tech */
+
+#cellules {display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;padding:3rem 2rem;background:linear-gradient(135deg,#bccfdf,#d9dde3);border-radius:1rem;box-shadow:0 8px 20px rgba(0,0,0,0.08);max-width:1200px;margin:2rem auto;}
+#cellules .content {flex:1 1 60%;}
+#cellules header {margin-bottom:1.5rem;}
+#cellules h2 {font-size:1.8rem;font-weight:700;color:#1f2937;margin-bottom:0.5rem;}
+#cellules header p {font-size:1rem;line-height:1.6;color:#4b5563;}
+#cellules ul {list-style:none;padding:0;margin:0 0 1.5rem 0;}
+#cellules ul li {position:relative;padding-left:1.5rem;margin-bottom:0.75rem;font-size:1rem;color:#374151;line-height:1.5;}
+#cellules ul li::before {content:"✔";position:absolute;left:0;top:0.1rem;color:#10b981;font-size:1rem;}
+#cellules .content p {font-weight:500;color:#111827;margin-top:1rem;}
+#cellules figure {flex:1 1 40%;margin:0;text-align:center;}
+#cellules img {max-width:100%;border-radius:0.75rem;box-shadow:0 6px 16px rgba(0,0,0,0.12);}
+#cellules figcaption {margin-top:0.5rem;font-size:0.9rem;color:#6b7280;}
+@media (max-width:900px){#cellules {flex-direction:column;text-align:center;}#cellules figure {margin-top:1.5rem;}#cellules ul li {text-align:left;}}
+
+
+#assemblage {display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;padding:3rem 2rem;background:linear-gradient(135deg,#bccfdf,#d9dde3);border-radius:1rem;box-shadow:0 8px 20px rgba(0,0,0,0.08);max-width:1200px;margin:2rem auto;}
+#assemblage .content {flex:1 1 60%;}
+#assemblage header {margin-bottom:1.5rem;}
+#assemblage h2 {font-size:1.8rem;font-weight:700;color:#1f2937;margin-bottom:0.5rem;}
+#assemblage header p {font-size:1rem;line-height:1.6;color:#4b5563;}
+#assemblage ul {list-style:none;padding:0;margin:0 0 1.5rem 0;}
+#assemblage ul li {position:relative;padding-left:1.5rem;margin-bottom:0.75rem;font-size:1rem;color:#374151;line-height:1.5;}
+#assemblage ul li::before {content:"✔";position:absolute;left:0;top:0.1rem;color:#10b981;font-size:1rem;}
+#assemblage .content p {font-weight:500;color:#111827;margin-top:1rem;}
+#assemblage figure {flex:1 1 40%;margin:0;text-align:center;}
+#assemblage img {max-width:100%;border-radius:0.75rem;box-shadow:0 6px 16px rgba(0,0,0,0.12);}
+#assemblage figcaption {margin-top:0.5rem;font-size:0.9rem;color:#6b7280;}
+@media (max-width:900px){#assemblage {flex-direction:column;text-align:center;}#assemblage figure {margin-top:1.5rem;}#assemblage ul li {text-align:left;}}
+
+
+#bms {display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;padding:3rem 2rem;background:linear-gradient(135deg,#bccfdf,#d9dde3);border-radius:1rem;box-shadow:0 8px 20px rgba(0,0,0,0.08);max-width:1200px;margin:2rem auto;}
+#bms .content {flex:1 1 60%;}
+#bms header {margin-bottom:1.5rem;}
+#bms h2 {font-size:1.8rem;font-weight:700;color:#1f2937;margin-bottom:0.5rem;}
+#bms header p {font-size:1rem;line-height:1.6;color:#4b5563;}
+#bms ul {list-style:none;padding:0;margin:0 0 1.5rem 0;}
+#bms ul li {position:relative;padding-left:1.5rem;margin-bottom:0.75rem;font-size:1rem;color:#374151;line-height:1.5;}
+#bms ul li::before {content:"✔";position:absolute;left:0;top:0.1rem;color:#10b981;font-size:1rem;}
+#bms .content p {font-weight:500;color:#111827;margin-top:1rem;}
+#bms figure {flex:1 1 40%;margin:0;text-align:center;}
+#bms img {max-width:100%;border-radius:0.75rem;box-shadow:0 6px 16px rgba(0,0,0,0.12);}
+#bms figcaption {margin-top:0.5rem;font-size:0.9rem;color:#6b7280;}
+@media (max-width:900px){#bms {flex-direction:column;text-align:center;}#bms figure {margin-top:1.5rem;}#bms ul li {text-align:left;}}
+
+#securite {display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;padding:3rem 2rem;background:linear-gradient(135deg,#bccfdf,#d9dde3);border-radius:1rem;box-shadow:0 8px 20px rgba(0,0,0,0.08);max-width:1200px;margin:2rem auto;}
+#securite .content {flex:1 1 60%;}
+#securite header {margin-bottom:1.5rem;}
+#securite h2 {font-size:1.8rem;font-weight:700;color:#1f2937;margin-bottom:0.5rem;}
+#securite header p {font-size:1rem;line-height:1.6;color:#4b5563;}
+#securite ul {list-style:none;padding:0;margin:0 0 1.5rem 0;}
+#securite ul li {position:relative;padding-left:1.5rem;margin-bottom:0.75rem;font-size:1rem;color:#374151;line-height:1.5;}
+#securite ul li::before {content:"✔";position:absolute;left:0;top:0.1rem;color:#10b981;font-size:1rem;}
+#securite figure {flex:1 1 40%;margin:0;text-align:center;}
+#securite img {max-width:100%;border-radius:0.75rem;box-shadow:0 6px 16px rgba(0,0,0,0.12);}
+#securite figcaption {margin-top:0.5rem;font-size:0.9rem;color:#6b7280;}
+@media (max-width:900px){#securite {flex-direction:column;text-align:center;}#securite figure {margin-top:1.5rem;}#securite ul li {text-align:left;}}
+
+
+#resume {display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2rem;padding:4rem 2rem;background:linear-gradient(135deg,#bccfdf,#d9dde3);border-radius:1rem;box-shadow:0 6px 16px rgba(0,0,0,0.06);max-width:1000px;margin:3rem auto;text-align:center;}
+#resume .content {max-width:700px;}
+#resume h2 {font-size:2rem;font-weight:800;color:#111827;margin-bottom:1rem;}
+#resume p {font-size:1.15rem;line-height:1.7;color:#374151;}
+#resume figure {margin:0;}
+#resume img {max-width:100%;border-radius:1rem;box-shadow:0 8px 20px rgba(0,0,0,0.1);transition:transform 0.4s ease;}
+#resume img:hover {transform:scale(1.03);}
+#resume figcaption {margin-top:0.75rem;font-size:1rem;font-weight:500;color:#4b5563;}
+
+
 
 /*-----------------------------------*/
 

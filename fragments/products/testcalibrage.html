@@ -1,0 +1,81 @@
+<div class="product-spec-container">
+  <div class="product-info">
+    <h2>Test & Calibrage</h2>
+
+    <!-- Slider -->
+    <div class="product-slider">
+      <button class="slider-btn prev">❮</button>
+      <div class="slider-track">
+        <img src="media/service_t&c1.png" alt="Photo 1">
+        <img src="media/service_t&c2.png" alt="Photo 2">
+        <img src="media/service_t&c3.png" alt="Photo 3">
+        <img src="media/service_t&c4.png" alt="Photo 4">
+      </div>
+      <button class="slider-btn next">❯</button>
+    </div>
+
+    <!-- Tableau compact -->
+    <table class="specs-table-compact">
+      <tbody>
+        <tr><th>Tension nominale</th><td>51,2V</td></tr>
+        <tr><th>Capacité</th><td>206Ah</td></tr>
+        <tr><th>Énergie</th><td>10,547kWh</td></tr>
+        <tr><th>Dimensions</th><td>480x170x240mm</td></tr>
+        <tr><th>Poids</th><td>55kg</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Boutons -->
+    <a href="fiche-technique.pdf" class="download-btn" target="_blank"> Télécharger la fiche technique</a>
+  </div>
+</div>
+
+<div class="product-spec-container">
+  <table class="specs-table">
+    <tbody>
+      <tr><th colspan="2">Caractéristiques Électriques</th></tr>
+      <tr><th>Tension nominale</th><td>25,6V</td></tr>
+      <tr><th>Capacité</th><td>206Ah</td></tr>
+      <tr><th>Énergie</th><td>5,274kWh</td></tr>
+      <tr><th>Tension de charge max</th><td>29,2V</td></tr>
+      <tr><th>Tension de coupure</th><td>20V</td></tr>
+
+      <tr><th colspan="2">Caractéristiques Physiques</th></tr>
+      <tr><th>Dimensions</th><td>480 × 170 × 240mm</td></tr>
+      <tr><th>Poids</th><td>25kg</td></tr>
+
+      <tr><th colspan="2">Performance</th></tr>
+      <tr><th>Cycles de vie</th><td>&gt;4000 cycles</td></tr>
+      <tr><th>Température d'utilisation</th><td>-20°C à +60°C</td></tr>
+      <tr><th>Auto-décharge</th><td>&lt;1% par mois</td></tr>
+
+      <tr><th colspan="2">Protection</th></tr>
+      <tr><th>Indice IP</th><td>IP54</td></tr>
+      <tr><th>Protection BMS</th><td>Surcharge, décharge profonde, court-circuit</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+document.querySelectorAll(".product-slider").forEach(slider=>{
+  const track = slider.querySelector(".slider-track");
+  const images = track.querySelectorAll("img");
+  const prev = slider.querySelector(".slider-btn.prev");
+  const next = slider.querySelector(".slider-btn.next");
+  let index = 0;
+
+  function updateSlide(){
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prev.addEventListener("click",()=>{
+    index = (index - 1 + images.length) % images.length;
+    updateSlide();
+  });
+
+  next.addEventListener("click",()=>{
+    index = (index + 1) % images.length;
+    updateSlide();
+  });
+});
+</script>
