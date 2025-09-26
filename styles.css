@@ -116,15 +116,10 @@ s { font-size: 0.9rem; }
 .herofaq-content h4 { margin: 1rem; font-weight: 600; }
 
 @media (max-width:1024px) {
-.heroabout, .heroproducts, .herotech, .heroContact, .herofaq { padding:3rem 1rem; min-height:100vh; background-attachment:scroll; background-size:cover; background-position:center; }
-.heroabout-content h1, .heroproducts-content h1, .herotech-content h1, .heroContact-content h1, .herofaq-content h1 { font-size:2rem; }
-.heroabout-content h4, .heroproducts-content h4, .herotech-content h4, .heroContact-content h4, .herofaq-content h4 { font-size:1rem; }
+.hero, .heroabout, .heroproducts, .herotech, .heroContact, .herofaq { padding:3rem 1rem; min-height:100vh; background-attachment:scroll; background-size:cover; background-position:center; }
 }
 @media (max-width:600px) {
-.heroabout, .heroproducts, .herotech, .heroContact, .herofaq { padding:2rem 1rem; min-height:100vh; background-size:cover; background-position:center; }
-.heroabout-content h1, .heroproducts-content h1, .herotech-content h1, .heroContact-content h1, .herofaq-content h1 { font-size:1.5rem; }
-.heroabout-content h4, .heroproducts-content h4, .herotech-content h4, .heroContact-content h4, .herofaq-content h4 { font-size:0.9rem; }
-.btnabout, .btnproducts { padding:0.5rem 1rem; font-size:0.9rem; }
+.hero, .heroabout, .heroproducts, .herotech, .heroContact, .herofaq { padding:2rem 1rem; min-height:100vh; background-size:cover; background-position:center; }
 }
 
 /* ----------------------------------------------*/
