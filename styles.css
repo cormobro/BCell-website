@@ -69,7 +69,6 @@ s { font-size: 0.9rem; }
 /* ---- HERO ---- */
 
 /* Herohome */
-.hero { background: url('media/banner.webp') center/cover no-repeat fixed; color: #fff; display: flex; text-align: center; align-items: center; padding: 4rem 0; min-height: 100vh; }
 .hero-content h1 { font-family: var(--font-heading); color: #fff; margin-bottom: 1rem; position: relative; display: inline-block; }
 .hero-content h1::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: -0.5rem; width: 70%; height: 5px; background-color:var(--color-primary); border-radius: 2px; }
 .hero-content h4 { margin: 1rem; font-weight: 600;}
