@@ -191,7 +191,7 @@ s { font-size: 0.9rem; }
 .equipe-container{display:flex;justify-content:center;gap:120px;flex-wrap:wrap;}
 .membre{text-align:center;}
 .photo{width:180px;height:180px;border-radius:50%;background-size:cover;background-position:center;background-color:#ccc;margin:0 auto 1rem;}
-.membre:nth-child(1) .photo{background-image:url(media/felbcell.webp);}
+.membre:nth-child(1) .photo{background-image:url(media/felbcell.png);}
 .membre:nth-child(2) .photo{background-image:url(media/maxbcell.webp);}
 .membre p{margin:0;color:var(--color-text);}
 @media(max-width:700px){.equipe-container{flex-direction:column;align-items:center;gap:40px;}}
