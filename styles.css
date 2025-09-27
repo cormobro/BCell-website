@@ -310,6 +310,16 @@ section { padding: 40px 20px; }
   .trusted-right img { max-height: 25px; }
 }
 
+@media (max-width:768px){
+  #products{flex-direction:column;align-items:center}
+  .product-list{width:100%;text-align:center;margin-bottom:20px}
+
+  .product-list p.active{color:#0073e6;font-weight:600}
+  .product-details{padding-left:0}
+}
+
+
+
 
 /* Products Details */
 
@@ -526,7 +536,7 @@ textarea {min-height: 150px;resize: vertical;}
 .hero-grid,.footer-grid{grid-template-columns:1fr;}
 
 .nav-toggle{display:none}
-.ham-menu{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0.5rem;position:absolute;top:1.5rem;right:1.5rem;width:2.5rem;height:2.5rem;cursor:pointer;z-index:3;background-color: white;}
+.ham-menu{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0.5rem;position:absolute;top:1.5rem;right:1.5rem;width:2.5rem;height:2.5rem;cursor:pointer;z-index:3;background-color: white; border-radius: 0.5rem;}
 .ham-menu .line{background:#000;width:80%;height:0.2rem;border-radius:2px;transition:all .3s ease}
 .nav-toggle:checked+.ham-menu .line1{transform:rotate(22.5deg)}
 .nav-toggle:checked+.ham-menu .line2{transform:rotate(-22.5deg)}
