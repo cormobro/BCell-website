@@ -8,7 +8,7 @@
 //   });
 // });
 
-document.addEventListener('DOMContentLoaded', () => { 
+document.addEventListener('DOMContentLoaded', () => {
   // 1. Gestion du toggle mobile
   const navToggle = document.querySelector('.nav-toggle');
   const mainNav = document.querySelector('.main-nav');
@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
   navToggle.addEventListener('click', () => {
     mainNav.classList.toggle('open');
   });
+
+document.querySelectorAll('.main-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('nav-toggle').checked = false;
+  });
+});
 
   // 2. Gestion de l'effet de scroll
   window.addEventListener('scroll', () => {
@@ -98,7 +104,7 @@ document.addEventListener('click', function (e) {
   }
 
  /* ---- Gestion Shadowbox ---- */
-  
+
 (function(){
   const shadowbox = document.querySelector('.shadowbox');
   if(!shadowbox) return;
