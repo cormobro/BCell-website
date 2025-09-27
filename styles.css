@@ -526,10 +526,10 @@ textarea {min-height: 150px;resize: vertical;}
 .hero-grid,.footer-grid{grid-template-columns:1fr;}
 
 .nav-toggle{display:none}
-.ham-menu{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0.5rem;position:absolute;top:1.5rem;right:1.5rem;width:2.5rem;height:2.5rem;cursor:pointer;z-index:3}
+.ham-menu{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0.5rem;position:absolute;top:1.5rem;right:1.5rem;width:2.5rem;height:2.5rem;cursor:pointer;z-index:3;background-color: white;}
 .ham-menu .line{background:#000;width:80%;height:0.2rem;border-radius:2px;transition:all .3s ease}
-.nav-toggle:checked+.ham-menu .line1{transform:rotate(24deg)}
-.nav-toggle:checked+.ham-menu .line2{transform:rotate(-24deg)}
+.nav-toggle:checked+.ham-menu .line1{transform:rotate(22.5deg)}
+.nav-toggle:checked+.ham-menu .line2{transform:rotate(-22.5deg)}
 .main-nav{position:fixed;top:0;right:0;width:70%;max-width:300px;height:100vh;background:#fff;display:flex;flex-direction:column;justify-content:center;transform:translateX(100%);opacity:0;transition:all .3s ease;z-index:2}
 .nav-toggle:checked~.main-nav{transform:translateX(0);opacity:1}
 .main-nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0;align-items:center}
