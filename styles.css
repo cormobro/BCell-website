@@ -171,6 +171,7 @@ s { font-size: 0.9rem; }
 .processus-icon { margin-bottom:1rem; z-index:2; background:#fff; }
 .processus-bubble { min-height:auto; padding:1.2rem; margin:0 auto; }
 .processus-arrow { display:none; }
+.processus-title { font-size: 2rem; }
 }
 
 
@@ -313,7 +314,6 @@ section { padding: 40px 20px; }
 @media (max-width:768px){
   #products{flex-direction:column;align-items:center}
   .product-list{width:100%;text-align:center;margin-bottom:20px}
-
   .product-list p.active{color:#0073e6;font-weight:600}
   .product-details{padding-left:0}
 }
