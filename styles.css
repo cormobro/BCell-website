@@ -227,6 +227,7 @@ s { font-size: 0.9rem; }
 .membre:nth-child(1) .photo{background-image:url(media/felbcell.png)}
 .membre:nth-child(2) .photo{background-image:url(media/maxbcell.webp)}
 .membre:nth-child(3) .photo{background-image:url(media/person.svg)}
+.membre:nth-child(4) .photo{background-image:url(media/minabcell.webp)}
 .membre p{margin:0;color:var(--color-text)}
 @media(max-width:1024px){.photo{width:150px;height:150px}}
 @media(max-width:700px){.equipe-container{align-items:center;gap:40px}.photo{width:130px;height:130px}}
