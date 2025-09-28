@@ -515,7 +515,7 @@ textarea {min-height: 150px;resize: vertical;}
 .social-icons img{height:40px;margin:0 .4rem;transition:transform .3s ease,opacity .3s ease}
 .social-icons img:hover{transform:scale(1.1);opacity:.8}
 .footer-box a{color:#d3cfcf;text-decoration:none;transition:color .3s ease}
-.footer-box a:hover{color:#fff;text-decoration:underline}
+.footer-box a:hover{color:#fff;}
 .footer-container .footer-box:nth-child(3){text-align:right}
 .logo-social-wrap{display:flex;flex-direction:column;align-items:center}
 @media(max-width:768px){.footer-container{flex-direction:column;text-align:center}
