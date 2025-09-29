@@ -364,6 +364,8 @@ section { padding: 40px 20px; }
 .product-description .service-item{position:relative;display:inline-block;background:#f9f9f9;border:1px solid #ddd;padding:6px 12px 6px 30px;border-radius:6px;font-weight:500;margin-bottom:.6em}
 .product-description .service-item::before{content:"✔";position:absolute;left:10px;color:#4CAF50;font-weight:bold}
 .product-description .service-item:hover{background:#eefaf0}
+.product-description .service-item2{position:relative;display:inline-block;background:#f9f9f9;border:1px solid #ddd;padding:6px 12px 6px 30px;border-radius:6px;font-weight:500;margin-bottom:.6em}
+.product-description .service-item2:hover{background:#eefaf0}
 @media(max-width:768px){.product-header{display:flex;flex-direction:column;align-items:flex-start;gap:10px;position:relative}
 .product-header h2{font-size:1.2rem}
 .product-certifications{position:static;justify-content:flex-start;flex-wrap:wrap}
