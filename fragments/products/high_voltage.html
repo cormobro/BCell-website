@@ -1,0 +1,62 @@
+<div class="product-spec-container">
+  <div class="product-info">
+    <h2>Batteries Haute Tension </h2>
+
+    <!-- Slider -->
+    <div class="product-slider">
+      <button class="slider-btn prev">❮</button>
+      <div class="slider-track">
+        <img src="hv_215kwh.png" alt="Photo 1">
+      </div>
+      <button class="slider-btn next">❯</button>
+    </div>
+
+    <!-- High Voltage -->
+<div class="product-description">
+  <div class="intro">
+	  <p>Vous cherchez une solution énergétique performante, fiable et parfaitement adaptée à vos applications industrielles, automobiles ou renouvelables ? Nos batteries HV sur-mesure sont conçues pour répondre à vos exigences les plus strictes en matière de <strong>puissance</strong>, <strong>durabilité</strong> et <strong>sécurité</strong>.</p>
+	  <br />
+	  <h3>Pourquoi choisir nos batteries HV sur-mesure ?</h3>
+	  <br />
+	  <p><strong>Conception personnalisée</strong> : Adaptées à vos spécifications techniques (tension, capacité, dimensions, environnement d’utilisation).</p>
+	  <p><strong>Technologie de pointe</strong> : Utilisation de cellules haut de gamme et de systèmes de gestion intelligents pour une longévité optimale.</p>
+	  <p><strong>Sécurité renforcée</strong> : Conformes aux normes internationales, avec des protections intégrées contre les surcharges, les courts-circuits et les variations de température.</p>
+	  <p><strong>Flexibilité</strong> : Solutions modulaires pour s’intégrer parfaitement à vos systèmes existants.</p>
+	  <p><strong>Support technique expert</strong> : Accompagnement de l’étude de projet à la mise en service, en passant par la maintenance.</p>
+	  <br />
+	  <h3>Un partenaire de confiance</h3>
+	  <br />
+	  <p>Nous mettons notre expertise au service de votre projet pour vous fournir une batterie HV <strong>sur-mesure</strong>, <strong>durable</strong> et <strong>économique</strong>. Que vous ayez besoin d’une solution clé en main ou d’une collaboration technique approfondie, notre équipe est à vos côtés pour vous conseiller et vous accompagner.</p>
+  </div>
+
+  <div class="services">
+    <div class="service-item">Test de capacite</div>
+    <div class="service-item">Calibrage</div>
+    <div class="service-item">Conseil personnalisé pour une durée de vie prolongée</div>
+    <div class="service-item">Disponible 7j/7</div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll(".product-slider").forEach(slider=>{
+  const track = slider.querySelector(".slider-track");
+  const images = track.querySelectorAll("img");
+  const prev = slider.querySelector(".slider-btn.prev");
+  const next = slider.querySelector(".slider-btn.next");
+  let index = 0;
+
+  function updateSlide(){
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prev.addEventListener("click",()=>{
+    index = (index - 1 + images.length) % images.length;
+    updateSlide();
+  });
+
+  next.addEventListener("click",()=>{
+    index = (index + 1) % images.length;
+    updateSlide();
+  });
+});
+</script>
