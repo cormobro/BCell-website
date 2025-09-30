@@ -120,6 +120,7 @@ s { font-size: 0.9rem; }
 }
 @media (max-width:600px) {
 .hero, .heroabout, .heroproducts, .herotech, .heroContact, .herofaq { padding:2rem 1rem; min-height:100vh; background-size:cover; background-position:center; }
+.hero-content h4 {text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);}
 }
 
 /* ----------------------------------------------*/
