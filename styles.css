@@ -64,6 +64,8 @@ s { font-size: 0.9rem; }
   transform: scaleX(1);
 }
 
+.flag {align-self: center; margin-top: -4px; margin-left: 10px;}
+
 /*-----------------------------------*/
 
 /* ---- HERO ---- */
