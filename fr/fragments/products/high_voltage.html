@@ -1,0 +1,64 @@
+<div class="product-spec-container">
+  <div class="product-info">
+    <h2>Batteries Haute Tension </h2>
+
+    <!-- Slider -->
+    <div class="product-slider">
+      <button class="slider-btn prev">❮</button>
+      <div class="slider-track">
+        <img src="media/hv_215kwh1.webp" alt="Photo 1">
+	<img src="media/hv_215kwh2.webp" alt="Photo 2">
+      </div>
+      <button class="slider-btn next">❯</button>
+    </div>
+
+    <!-- High Voltage -->
+<div class="product-description">
+  <div class="intro">
+	  <p>Vous cherchez une solution énergétique performante, fiable et parfaitement adaptée à vos applications industrielles, automobiles ou renouvelables ? Nos batteries HV sur-mesure sont conçues pour répondre à vos exigences les plus strictes en matière de <strong>puissance</strong>, <strong>durabilité</strong> et <strong>sécurité</strong>.</p>
+	  <br />
+	  <h3>Pourquoi choisir nos batteries HV sur-mesure ?</h3>
+	  <br />
+	  <p><strong>Conception personnalisée</strong> : Adaptées à vos spécifications techniques (tension, capacité, dimensions, environnement d’utilisation).</p>
+	  <p><strong>Technologie de pointe</strong> : Utilisation de cellules haut de gamme et de systèmes de gestion intelligents pour une longévité optimale.</p>
+	  <p><strong>Sécurité renforcée</strong> : Conformes aux normes internationales, avec des protections intégrées contre les surcharges, les courts-circuits et les variations de température.</p>
+	  <p><strong>Flexibilité</strong> : Solutions modulaires pour s’intégrer parfaitement à vos systèmes existants.</p>
+	  <p><strong>Support technique expert</strong> : Accompagnement de l’étude de projet à la mise en service, en passant par la maintenance.</p>
+	  <br />
+	  <h3>Un partenaire de confiance</h3>
+	  <br />
+	  <p>Nous mettons notre expertise au service de votre projet pour vous fournir une batterie HV <strong>sur-mesure</strong>, <strong>durable</strong> et <strong>économique</strong>. Que vous ayez besoin d’une solution clé en main ou d’une collaboration technique approfondie, notre équipe est à vos côtés pour vous conseiller et vous accompagner.</p>
+  </div>
+
+  <div class="services">
+    <div class="service-item2">Disponibles en modules personnalisables</div>
+    <div class="service-item2">256 V a 1485 V</div>
+    <div class="service-item2">80 kWh a 3712 kWh</div>
+    <div class="service-item2">8p29s</div>
+    <div class="service-item2">Conseil personnalisé pour une durée de vie prolongée</div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll(".product-slider").forEach(slider=>{
+  const track = slider.querySelector(".slider-track");
+  const images = track.querySelectorAll("img");
+  const prev = slider.querySelector(".slider-btn.prev");
+  const next = slider.querySelector(".slider-btn.next");
+  let index = 0;
+
+  function updateSlide(){
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prev.addEventListener("click",()=>{
+    index = (index - 1 + images.length) % images.length;
+    updateSlide();
+  });
+
+  next.addEventListener("click",()=>{
+    index = (index + 1) % images.length;
+    updateSlide();
+  });
+});
+</script>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CACHE CONTROL (TO REMOVE ON PROD)-->
+  <meta http-equiv="Cache-control" content="no-cache">
+  <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+  <title>BCell Group</title>
+    <link rel="preload" as="image" href="/website/media/banner.webp">
+  <style>
+    .hero { background: url('/website/media/banner.webp') center/cover no-repeat fixed; color: #fff; display: flex; text-align: center; align-items: center; padding: 4rem 0; min-height: 100vh; }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js" integrity="sha384-Akqfrbj/HpNVo8k11SXBb6TlBWmXXlYQrCSqEWmyKJe+hDm3Z/B2WVG4smwBkRVm" crossorigin="anonymous"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+<header class="site-header">
+  <div class="container">
+    <a href="#" class="logo" hx-get="fragments/home.html" hx-target="#main-content" hx-swap="innerHTML">
+      <img src="media/Logo2nb.png" alt="BCell Logo">
+    </a>
+    <div>
+      <!-- input caché pour toggle -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+      <!-- icône hamburger lié au checkbox -->
+      <label for="nav-toggle" class="ham-menu">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+      </label>
+
+      <!-- menu latéral -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#" hx-get="fragments/home.html" hx-target="#main-content" hx-swap="innerHTML">Accueil</a></li>
+          <li><a href="#" hx-get="fragments/about.html" hx-target="#main-content" hx-swap="innerHTML">À propos</a></li>
+          <li><a href="#" hx-get="fragments/products.html" hx-target="#main-content" hx-swap="innerHTML">Produits</a></li>
+          <li><a href="#" hx-get="fragments/tech.html" hx-target="#main-content" hx-swap="innerHTML">Technologie</a></li>
+          <li><a href="#" hx-get="fragments/contact.html" hx-target="#main-content" hx-swap="innerHTML">Contact</a></li>
+          <li><a href="#" hx-get="fragments/faq.html" hx-target="#main-content" hx-swap="innerHTML">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content loaded via HTMX -->
+  <main id="main-content"
+        hx-get="fragments/home.html"
+        hx-trigger="load"
+        hx-swap="innerHTML"
+        class="reset-scroll">
+  </main>
+
+    <!-- Footer for legal informations -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-box logo-social">
+        <div class="logo-social-wrap">
+         <img class="logofoot" src="media/Logo2nb.png" alt="BCell Logo">
+           <div class="social-icons">
+              <a href="https://www.linkedin.com/company/bcell-group/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="media/linkedin.svg" alt="LinkedIn">
+          </a>
+            <a href="https://www.facebook.com/profile.php?id=100092736174908" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="media/facebook.svg" alt="Facebook">
+         </a>
+       </div>
+      </div>
+    </div>
+
+    <div class="footer-box">
+      <p>Ancienne Usine Coca-Cola, Rue Dr RASETA - ANDRAHARO
+101 ANTANANARIVO,
+MADAGASCAR</p>
+      <p><a href="mailto:sales@bcell.group">sales@bcell.group</a></p>
+      <p><a href="tel:+261345279647">+261 34 52 796 47</a></p>
+      <p><a href="tel:+261386886172">+261 38 68 861 72</a></p>
+    </div>
+    <div class="footer-box">
+      <p>&copy; 2025 BCELL Group. Tous droits réservés.</p>
+      <p>Filiale de BCELL Ltd, UK</p>
+      <p>
+        <a href="/website/media/Mentions_legales.pdf" target="_blank">Mentions légales</a> |
+        <a href="/website/media/Politique_de_Confidentialite.pdf" target="_blank">Politique de confidentialité</a>
+      </p>
+    </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

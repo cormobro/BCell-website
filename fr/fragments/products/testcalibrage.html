@@ -1,0 +1,64 @@
+<div class="product-spec-container">
+  <div class="product-info">
+    <h2>Test & Calibrage
+		<span class="sticker-stock">Disponible</span>
+	</h2>
+
+    <!-- Slider -->
+    <div class="product-slider">
+      <button class="slider-btn prev">❮</button>
+      <div class="slider-track">
+        <img src="media/service_t&c1.png" alt="Photo 1">
+        <img src="media/service_t&c2.png" alt="Photo 2">
+	    	<img src="media/service_t&c5.png" alt="Photo 5">
+        <img src="media/service_t&c3.png" alt="Photo 3">
+        <img src="media/service_t&c4.png" alt="Photo 4">
+      </div>
+      <button class="slider-btn next">❯</button>
+    </div>
+
+    <!-- Test & Calibrage -->
+<div class="product-description">
+  <div class="intro">
+    <p>Nous offrons un service de test et de calibrage complet pour garantir des performances optimales. Concrètement, nous effectuons des tests approfondis pour vérifier la capacité, la tension, la résistance interne et d'autres paramètres clés de vos batteries.</p>
+    <p>Nous calibrons ensuite les systèmes de gestion de batterie (BMS) pour assurer une surveillance précise et une gestion efficace de l'énergie. Ce service est essentiel pour maximiser la durée de vie et la fiabilité de vos batteries, en particulier dans des applications critiques.</p>
+    <p>Notre équipe d'experts utilise des équipements de pointe pour effectuer ces tests et calibrages, garantissant ainsi que vos batteries fonctionnent à leur plein potentiel.</p>
+    <p>Contactez-nous pour en savoir plus sur notre service de test et de calibrage et comment il peut bénéficier à votre installation. Et ce, que vous ayez acheté vos batteries chez nous ou ailleurs, peu importe la marque.</p>
+  </div>
+
+  <div class="services">
+    <div class="service-item">Test de capacité</div>
+	</p>
+    <div class="service-item">Calibrage</div>
+	</p>
+    <div class="service-item">Rapport détaillé</div>
+	</p>
+    <div class="service-item">Conseil personnalisé pour une durée de vie prolongée</div>
+	</p>
+    <div class="service-item">Disponible 7j/7</div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll(".product-slider").forEach(slider=>{
+  const track = slider.querySelector(".slider-track");
+  const images = track.querySelectorAll("img");
+  const prev = slider.querySelector(".slider-btn.prev");
+  const next = slider.querySelector(".slider-btn.next");
+  let index = 0;
+
+  function updateSlide(){
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prev.addEventListener("click",()=>{
+    index = (index - 1 + images.length) % images.length;
+    updateSlide();
+  });
+
+  next.addEventListener("click",()=>{
+    index = (index + 1) % images.length;
+    updateSlide();
+  });
+});
+</script>

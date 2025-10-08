@@ -1,0 +1,105 @@
+<div class="product-spec-container">
+  <div class="product-spec-image">
+  </div>
+
+  <div class="product-info">
+    <div class="product-header">
+    <h2>BMax-51.2V-628Ah
+      <span class="sticker-stock">En stock</span>
+      <span class="sticker">Nouveauté!</span>
+	  </h2>
+    <div class="product-certifications">
+      <img src="media/CE-Compliant.webp" alt="Certification CE">
+      <img src="media/rohs.png" alt="Certification RoHS">
+    </div>
+    </div>
+        <!-- Slider -->
+    <div class="product-slider">
+      <button class="slider-btn prev">❮</button>
+      <div class="slider-track">
+        <img src="media/gblanche1.png" alt="Photo 1">
+        <img src="media/gblanche2.png" alt="Photo 2">
+        <img src="media/gblanche3.png" alt="Photo 3">
+        <img src="media/gblanche4.png" alt="Photo 4">
+        <img src="media/gblanche5.png" alt="Photo 5">
+      </div>
+      <button class="slider-btn next">❯</button>
+    </div>
+    <table class="specs-table-compact">
+      <tbody>
+        <tr><th>Technologie</th><td>LiFePO₄ (Lithium Fer Phosphate)</td></tr>
+        <tr><th>Tension nominale</th><td>51.2 V</td></tr>
+        <tr><th>Capacité nominale</th><td>628 Ah</td></tr>
+        <tr><th>Énergie nominale</th><td>32.154 kWh</td></tr>
+        <tr><th>Dimensions (L*l*h)</th><td>416*560*910 mm</td></tr>
+        <tr><th>Poids</th><td>245kg (±3kg)</td></tr>
+        <tr><th>Garantie</th><td>10000 cycles OU 10 ans</td></tr>
+      </tbody>
+    </table>
+    <a href="media/B-BOX 32.15kWh - 51.2V (avec BMS).pdf" class="download-btn" target="_blank"> 📄 Télécharger la fiche technique</a>
+  </div>
+</div>
+<div class="product-spec-container">
+<table class="specs-table">
+    <tbody>
+      <tr><th colspan="2">Caractéristiques Électriques</th></tr>
+      <tr><th>Technologie</th><td>LiFePO₄ (Lithium Fer Phosphate)</td></tr>
+      <tr><th>Tension nominale</th><td>51.2 V</td></tr>
+      <tr><th>Capacité nominale</th><td>628 Ah</td></tr>
+      <tr><th>Énergie nominale</th><td>32.154 kWh</td></tr>
+      <tr><th>Configuration en série</th><td>N/A</td></tr>
+      <tr><th>Configuration en parallèle</th><td>Jusqu'à 16</td></tr>
+
+      <tr><th colspan="2">Caractéristiques Physiques</th></tr>
+      <tr><th>Type de boitier</th><td>Acier inoxydable</td></tr>
+      <tr><th>Dimensions (L*l*h)</th><td>416*560*910 mm</td></tr>
+      <tr><th>Poids</th><td>245kg (±3kg)</td></tr>
+      <tr><th>Refroidissement</th><td>Ventilation active</td></tr>
+      <tr><th>Communication</th><td>Bus CAN / RS-485 et Bluetooth</td></tr>
+      <tr><th>Système de gestion de batterie (BMS)</th><td>Master / Slave BMS intégré</td></tr>
+      <tr><th>Connexions d'alimentation</th><td>Goujons M8</td></tr>
+      <tr><th>Affichage</th><td>LCD tactile</td></tr>
+
+      <tr><th colspan="2">Performance</th></tr>
+      <tr><th>Cycles de vie</th><td>&gt;12000 cycles (80%DoD/25°C@0.5P/0.5P@70%EOL)</td></tr>
+      <tr><th>Température d'utilisation</th><td>-10°C à 50°C</td></tr>
+      <tr><th>Taux d'auto-décharge mensuel</th><td>≈ 3%</td></tr>
+
+      <tr><th colspan="2">Protection</th></tr>
+      <tr><th>Indice IP</th><td>IP10</td></tr>
+      <tr><th>Protection anti-incendie</th><td>Intégrée</td></tr>
+      <tr><th>Équilibrage</th><td>Actif et Passif</td></tr>
+      <tr><th>Protection BMS</th><td>Surcharge, décharge profonde, court-circuit</td></tr>
+
+      <tr><th colspan="2">Normes</th></tr>
+      <tr><th>Certifications</th><td>CE Compliant, RoHS Compliant</td></tr>
+      <tr><th>EMC : Émission</th><td>EN-IEC 61000-6-3</td></tr>
+      <tr><th>EMC : Immunité</th><td>EN-IEC 61000-6-1</td></tr>
+      <tr><th>Directive basse tension</th><td>EN 60335-1</td></tr>
+    </tbody>
+</table>
+</div>
+
+<script>
+document.querySelectorAll(".product-slider").forEach(slider=>{
+  const track = slider.querySelector(".slider-track");
+  const images = track.querySelectorAll("img");
+  const prev = slider.querySelector(".slider-btn.prev");
+  const next = slider.querySelector(".slider-btn.next");
+  let index = 0;
+
+  function updateSlide(){
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prev.addEventListener("click",()=>{
+    index = (index - 1 + images.length) % images.length;
+    updateSlide();
+  });
+
+  next.addEventListener("click",()=>{
+    index = (index + 1) % images.length;
+    updateSlide();
+  });
+});
+</script>
