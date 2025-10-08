@@ -12,7 +12,7 @@
     <div class="info-container">
       <div class="info-item">
         <div class="icon">
-          <img src="media/visitus.svg" alt="Visit Us" loading="lazy">
+          <img src="../media/visitus.svg" alt="Visit Us" loading="lazy">
         </div>
         <h3>VISIT US</h3>
         <p>Nos bureaux vous accueillent du lundi au vendredi, appelez-nous pour prendre rendez-vous !</p>
@@ -21,7 +21,7 @@
       
       <div class="info-item">
         <div class="icon">
-          <img src="media/callus.svg" alt="Call Us" loading="lazy">
+          <img src="../media/callus.svg" alt="Call Us" loading="lazy">
         </div>
         <h3>CALL US</h3>
         <p>Une équipe disponible pour répondre à vos questions, 7 jours sur 7, et presque 24 heures sur 24.</p>
@@ -31,7 +31,7 @@
       
       <div class="info-item">
         <div class="icon">
-          <img src="media/contactus.svg" alt="Contact Us" loading="lazy">
+          <img src="../media/contactus.svg" alt="Contact Us" loading="lazy">
         </div>
         <h3>CONTACT US</h3>
         <p>Envoyez-nous votre demande via le formulaire ci-dessous, nous vous recontacterons au plus vite.</p>
@@ -84,18 +84,14 @@
   </div>
 </section>
 
-<!-- ✅ Script EmailJS -->
-<!-- Charger la librairie AVANT ton script -->
-
 <script>
   (function() {
-    emailjs.init("jQbLQo9dvajQpLNrz"); // ⚡ ta vraie Public Key
+    emailjs.init("jQbLQo9dvajQpLNrz");
   })();
 
   document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    // 1. Envoi à l’utilisateur (auto-réponse)
     emailjs.sendForm("service_kpa4nae", "template_sq3l26x", this)
       .then(() => {
         console.log("✅ Auto-réponse envoyée");
