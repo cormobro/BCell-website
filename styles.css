@@ -576,7 +576,7 @@ textarea {min-height: 150px;resize: vertical;}
   html {
     font-size: 15px;
   }
-  .compare table {font-size: 11px;}
+  .compare table {font-size: 10px;}
 }
 
 /* Styles pour les écrans de grande taille */
