@@ -109,3 +109,5 @@ document.body.addEventListener('htmx:afterSwap', function(evt) {
     window.scrollTo(0, 0);
   }
 });
+
+
