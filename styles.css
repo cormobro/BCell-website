@@ -146,7 +146,7 @@ s { font-size: 0.9rem; }
 .oval-btn{margin-top:.6rem;display:inline-block;padding:.5rem .9rem;border-radius:999px;background:var(--color-primary);color:var(--color-bg);font-weight:700;font-size:.95rem;text-decoration:none;transition:opacity .2s ease; opacity:0.7;}
 .oval-btn:hover{opacity:1}
 @media(max-width:992px){.hero-ovals{grid-template-columns:repeat(2,minmax(220px,1fr))}}
-@media(max-width:576px){.hero-ovals{grid-template-columns:1fr}}
+@media(max-width:576px){.hero-ovals{grid-template-columns:1fr}; }
 
 
 /* Benefits */
