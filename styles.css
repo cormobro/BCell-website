@@ -148,6 +148,12 @@ s { font-size: 0.9rem; }
 .oval-btn:hover{opacity:1}
 @media(max-width:992px){.hero-ovals{gap:1%;}}
 @media(max-width:576px){.hero-ovals{grid-template-columns:1fr}; }
+@media(max-width:768px){
+	.bigtext strong {font-size:clamp(1rem, 1.7vw, 2rem)};
+	.count strong {font-size:clamp(1rem, 2.5vw, 3rem)};
+	.unit {font-size:clamp(1rem, 1.2vw, 1.2rem)};
+	.oval p {font-size:clamp(0.rem, 1.2vw, 1rem};
+}
 
 
 /* Benefits */
